@@ -25,6 +25,7 @@
   "scripts": {
     "prepare": "is-ci || husky install",
     "prebuild": "shx rm -rf ./dist",
+    "precommit": ["build"],
     "build": "npm-run-all --parallel build:lib build:schematics",
     "build:lib": "tsc",
     "postbuild:lib": "npm run copy:lib:schemes",
