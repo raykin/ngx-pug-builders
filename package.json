@@ -36,7 +36,7 @@
     "copy:lib:schemes:server": "shx cp ./node_modules/@angular-devkit/build-angular/src/builders/server/schema.json ./dist/server",
     "build:schematics": "tsc -p tsconfig.schematics.json",
     "postbuild:schematics": "npm-run-all --parallel fix:schematics:dist copy:schematics:collection",
-    "postinstall": "cd node_modules/ngx-pug-builders && npm install && npm run build"
+    "postinstall": "cd node_modules/ngx-pug-builders && npm install && npm run build",
     "fix:schematics:dist": "npm run move:schematics:dist && npm run clean:schematics:dist",
     "move:schematics:dist": "shx mv ./dist/schematics/src/schematics/ng-add ./dist/schematics/ng-add",
     "clean:schematics:dist": "shx rm -rf ./dist/schematics/src",
